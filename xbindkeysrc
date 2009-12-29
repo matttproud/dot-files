@@ -1,0 +1,11 @@
+"xscreensaver-command -lock"
+Control + Alt + l
+
+"firefox2 http://mondrian/"
+Control + Alt + m
+
+"xterm -e /bin/bash -l -c 'emacs -nw'"
+Control + Alt + e
+
+"firefox2 http://www.google.com/"
+Control + Alt + f

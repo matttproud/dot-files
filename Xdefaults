@@ -1,0 +1,23 @@
+XTerm*background: black
+XTerm*cursorColor: #89B83F
+XTerm*eightBitInput: false
+XTerm*foreground: white
+XTerm*metaSendsEscape: true
+XTerm*savelines: 4000
+XTerm*scrollBar: true
+
+Xterm*TitleBar: on
+XTerm*faceName: Vera sans mono
+XTerm*faceSize: 10
+Xterm*termName: xterm-xfree86
+XTerm*font: 7x14
+XTerm*boldFont: -misc-fixed-bold-r-normal--14-130-75-75-c-70-UTF-8
+
+xterm*visualBell: true
+
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+
+xscreensaver.quad: True

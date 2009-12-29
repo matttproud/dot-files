@@ -1,0 +1,7 @@
+c() {
+  if [[ "${HOSTNAME}" = "${1}" ]]; then
+    echo "Dummy, you are already connected to ${1}."
+  else
+    ssh "${@}"
+  fi
+}

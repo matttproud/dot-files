@@ -1,0 +1,3 @@
+if [ -d "/usr/NX" ]; then
+  export PATH="/usr/NX/bin:${PATH}"
+fi

@@ -1,0 +1,115 @@
+;; -*-lisp-*-
+(in-package :stumpwm)
+
+
+;; Show the time in the modeline
+(setf *screen-mode-line-format*
+      (list '(:eval (run-shell-command "date '+%R, %F %a'|tr -d [:cntrl:]" t)) " | [^B%n^b] %W"))
+
+(setf *mouse-focus-policy* :sloppy) ;; :click, :ignore, :sloppy
+
+;; Clear rules
+;; (clear-window-placement-rules)
+
+(setf *focus-color* "green")
+(setf *unfocus-color* "black")
+
+(setf *message-window-gravity* :bottom-right)
+(setf *input-window-gravity* :buttom-right)
+(set-bg-color "black")
+(set-fg-color "yellow")
+(set-border-color "yellow")
+
+(setf *mode-line-screen-position* :bottom)
+(setf *mode-line-frame-position* :buttom)
+(setf *mode-line-position* :bottom)
+
+
+; Turn on the modeline
+(if (not (head-mode-line (current-head)))
+     (toggle-mode-line (current-screen) (current-head)))
+
+
+(run-shell-command "xmodmap -quiet ~/.Xmodmap")
+(run-shell-command "xrdb -load ~/.Xdefaults -quiet")
+(run-shell-command "xscreensaver-command -exit ; killall xscreensaver 2>/dev/null ; xscreensaver --no-splash")
+(run-shell-command "nm-applet")
+
+;; (set-prefix-key (kdb "<"))
+
+;; See http://en.wikipedia.org/wiki/User:Gwern/.stumpwmrc
+
+(setf *start-up-message* "Never stop!")
+
+(set-prefix-key (kbd "C-i"))
+
+(defcommand pull-window-from-list (&optional (fmt *window-format*)) (:rest)
+"Blah"
+(if (null (group-windows (current-group)))
+    (message "No Managed Windows")
+    (let * ((group (current-group))
+	    (window (second (select-from-menu
+			     (current-screen)
+			     (mapcar (lambda (w)
+				       (list (format-expand *window-formatters* fmt w) w))
+				     (sort-windows-group))))))
+	 (if window
+	     (pull-window window)
+	     (throw 'error :abort)))))
+
+
+(define-key *top-map* (kbd "M-k") "move-focus up")
+(define-key *top-map* (kbd "M-j") "move-focus down")
+(define-key *top-map* (kbd "M-l") "move-focus right")
+(define-key *top-map* (kbd "M-h") "move-focus left")
+
+(define-key *top-map* (kbd "C-M-k") "move-window up")
+(define-key *top-map* (kbd "C-M-j") "move-window down")
+(define-key *top-map* (kbd "C-M-l") "move-window right")
+(define-key *top-map* (kbd "C-M-h") "move-window left")
+
+(define-key *top-map* (kbd "S-M-SPC") "prev-in-frame")
+(define-key *top-map* (kbd "M-SPC") "next-in-frame")
+
+;; (define-key *top-map* (kbd "s-1") "gselect 1")
+;; (define-key *top-map* (kbd "s-2") "gselect 2")
+;; (define-key *top-map* (kbd "s-1") "gselect 1")
+;; (define-key *top-map* (kbd "s-2") "gselect 2")
+;; (define-key *top-map* (kbd "s-3") "gselect 3")
+;; (define-key *top-map* (kbd "s-4") "gselect 4")
+;; (define-key *top-map* (kbd "s-5") "gselect 5")
+;; (define-key *top-map* (kbd "s-6") "gselect 6")
+;; (define-key *top-map* (kbd "s-7") "gselect 7")
+;; (define-key *top-map* (kbd "s-8") "gselect 8")
+;; (define-key *top-map* (kbd "s-9") "gselect 9")
+
+;; http://mikael.jansson.be/log/trying-out-stumpwm
+
+(setf *root-map*
+      (let ((m (stumpwm:make-sparse-keymap)))
+	(define-key m (kbd "g") "vprev")
+	(define-key m (kbd "G") "vgroups")
+	(define-key m (kbd "~") '*groups-map*)
+	(define-key m (kbd "p") "paste-x-selection")
+	(define-key m (kbd "C-F11") "fullscreen")
+	(define-key m (kbd "C-M-F11") "only")
+        (define-key m (kbd "!") "exec")
+	(define-key m (kbd "k") "pull-marked")
+	(define-key m (kbd "e") "exec emacs")
+	(define-key m (kbd "M-r") "loadrc reload")
+	(define-key m (kbd ":") "eval-line")
+	m))
+	  
+
+(setf *debug-level* 10)
+
+;; (dotimes (i 13)
+;;   (unless (eq i 0)
+;;     (define-key *top-map* (kbd (format nil "M-F~a" i))
+;;       (if (eq i 1)
+;; 	  (format nil "gselect Default")
+;; 	  (format nil "gselect ~a" i)))))
+;; (dotimes (i 13)
+;;   (unless (eq i 0)
+;;     (gnewbg (format nil "~a" i))))
+
