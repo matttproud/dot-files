@@ -74,4 +74,10 @@
   (interactive "P")
   (self-insert-command (prefix-numeric-value argument)))
 
+(setq auto-mode-alist
+      (nconc
+       (list
+        (cons "\\.py$" 'python-mode))
+       auto-mode-alist))
+
 (provide 'behavior)

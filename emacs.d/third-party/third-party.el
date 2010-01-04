@@ -46,4 +46,4 @@
 
 (require 'nav)
 
-(provide 'lisp)
+(provide 'third-party)
