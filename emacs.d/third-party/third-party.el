@@ -1,18 +1,18 @@
 ;; Add a git packages to the search path.
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/git-emacs-1.1"))
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/vc-git"))
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/git-emacs-1.1"))
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/vc-git"))
 
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emacs-rails"))
+;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/emacs-rails"))
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party"))
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/mmm-mode-0.4.8"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/mmm-mode-0.4.8"))
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/color-theme-6.6.0"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/color-theme-6.6.0"))
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/g-client"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/g-client"))
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emacs-nav-16"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/emacs-nav-16"))
 
 (require 'color-theme)
 (color-theme-initialize)

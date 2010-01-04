@@ -16,20 +16,22 @@
 (setq-default indent-tabs-mode nil)
 (setq indent-tabs-mode nil)
 
-(add-hook 'c++-mode-hook
-          '(lambda () (font-lock-set-up-width-warning 80)))
+;; This is not always working and will need to be investigated.
 
-(add-hook 'java-mode-hook
-          '(lambda () (font-lock-set-up-width-warning 80)))
+;; (add-hook 'c++-mode-hook
+;;           '(lambda () (font-lock-set-up-width-warning 80)))
 
-(add-hook 'python-mode-hook
-          '(lambda () (font-lock-set-up-width-warning 80)))
+;; (add-hook 'java-mode-hook
+;;           '(lambda () (font-lock-set-up-width-warning 80)))
 
-(add-hook 'sh-mode
-          '(lambda () (font-lock-set-up-width-warning 80)))
+;; (add-hook 'python-mode-hook
+;;           '(lambda () (font-lock-set-up-width-warning 80)))
 
-(add-hook 'ruby-mode
-          '(lambda () (font-lock-set-up-width-warning 80)))
+;; (add-hook 'sh-mode
+;;           '(lambda () (font-lock-set-up-width-warning 80)))
+
+;; (add-hook 'ruby-mode
+;;           '(lambda () (font-lock-set-up-width-warning 80)))
 
 (setq tab-stop-list '(2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40))
 (setq sh-indentation 2
@@ -79,5 +81,8 @@
        (list
         (cons "\\.py$" 'python-mode))
        auto-mode-alist))
+
+;; This preempts the built-in Python mode for the on in third-party.
+(autoload 'python-mode "python-mode")
 
 (provide 'behavior)
