@@ -1,3 +1,5 @@
+# -*- mode: sh -*-
+
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
@@ -16,3 +18,10 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias bt=/auto/buildstatic/projects/bigtable/bt
+
+_CHROME_BASE="${HOME}/.config/google-chrome-"
+
+alias chrome-personal="google-chrome --user-data-dir=\"${_CHROME_BASE}personal\""
+alias chrome-work="google-chrome --user-data-dir=\"${_CHROME_BASE}work\""
+
+unset _CHROME_BASE
