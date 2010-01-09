@@ -136,4 +136,9 @@ bind ^] paste [.]
 # hardstatus alwaysignore
 # hardstatus alwayslastline "%w"
 
+hardstatus on
+hardstatus alwayslastline
+hardstatus alwayslastline "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+
 #escape ^n^i
+escape ^Nn
