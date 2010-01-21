@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 XTerm*background: black
 XTerm*cursorColor: #89B83F
 XTerm*eightBitInput: false

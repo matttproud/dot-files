@@ -1,6 +1,8 @@
 # XScreenSaver Preferences File
 # Written by xscreensaver-demo 4.23 for mtp on Thu Jan 17 18:30:09 2008.
 # http://www.jwz.org/xscreensaver/
+# 
+# -*- mode: conf -*-
 
 timeout:	0:10:00
 cycle:		0:10:00

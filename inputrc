@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 $include /etc/inputrc
 
 set bell-style visible

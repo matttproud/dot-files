@@ -1,3 +1,5 @@
+# -*- mode: conf -*-
+
 clear mod3
 remove lock = Caps_Lock
 add mod3 = Caps_Lock

@@ -5,6 +5,8 @@
 # functions, options, key bindings, etc.
 #
 
+# http://jarod.wikidot.com/zsh-configuration
+
 # source profile like .bashrc
 if [ -f /etc/profile ]; then
   source /etc/profile
@@ -138,6 +140,19 @@ setopt shwordsplit
 
 # Complete in-word.
 setopt completeinword
+
+# Do not record space-prefixed commands.
+setopt hist_ignore_space
+
+# Make sure that pastes involving tabs do not invoke completion.
+zstyle ':completion:*' insert-tab pending
+
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path /tmp/.zsh-cache-${USER}
+
+zstyle ':completion:*' expand 'yes'
+zstyle ':completion:*' squeeze-slashes 'yes'
+zstyle ':completion:*:processes' command 'ps -au${USER}'
 
 if [ -n "${EMACS}" ]; then
   unsetopt zle

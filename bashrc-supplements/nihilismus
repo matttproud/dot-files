@@ -1,3 +1,5 @@
+# -*- mode: sh -*-
+
 # if [[ "${HOSTNAME}" =~ 'nihilismus' ]]; then
 #    export LD_LIBRARY_PATH="/opt/imagemagick-6.4.3/lib:/lib:/usr/lib:/usr/local/lib"
 #    export PATH="${PATH}:/opt/android-sdk_m5-rc15_linux-x86/tools"
