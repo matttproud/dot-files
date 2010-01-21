@@ -1,3 +1,4 @@
+# -*- mode: sh -*-
 #
 # .zshrc is sourced in interactive shells.
 # It should contain commands to set up aliases,
@@ -7,15 +8,6 @@
 # source profile like .bashrc
 if [ -f /etc/profile ]; then
   source /etc/profile
-fi
-
-# Set default printer on googleedu*.corp.google.com workstations
-#  in Cairo conference room in Mountain View for new hire orientation
-
-if [ "$(echo $HOSTNAME | cut -c 1-9)" = "googleedu" ]
-then
-  export PRINTER=hpcairo
-  export LPDEST=$PRINTER
 fi
 
 # User specific aliases and functions go here (override system defaults)
@@ -56,7 +48,9 @@ function precmd() {
 function preexec() {
   case $TERM in
     xterm*)
-      print -Pn "\e]0;$*\a"
+      # %~ - CWD
+      # $1 - CMD
+      print -Pn "\e]0;%~ - $1\a"
       ;;
   esac
 }
@@ -75,3 +69,40 @@ bindkey '\e[H' beginning-of-line
 bindkey '\e[F' end-of-line
 
 export EDITOR vim
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory nomatch notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/mtp/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# This allows one to CD to a target without CD.
+setopt AUTO_CD
+
+# Do not push duplicate directories onto the stack.
+setopt PUSHD_MINUS
+
+# Minimize the amount of whitespace stored.
+setopt HIST_REDUCE_BLANKS
+
+# $# for a="a b c" yield 3
+setopt shwordsplit
+
+# Complete in-word.
+setopt completeinword
+
+if [ -n "${EMACS}" ]; then
+  unsetopt zle
+fi
+
+for supplement in "${HOME}/bashrc-supplements"/* ; do
+  . "${supplement}"
+done

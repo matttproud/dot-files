@@ -1,7 +1,7 @@
-if [[ "${HOSTNAME}" =~ 'nihilismus' ]]; then
-   export LD_LIBRARY_PATH="/opt/imagemagick-6.4.3/lib:/lib:/usr/lib:/usr/local/lib"
-   export PATH="${PATH}:/opt/android-sdk_m5-rc15_linux-x86/tools"
-   export PATH="/var/lib/gems/1.8/bin:${PATH}"
-   export GTK_PATH="/opt/murrine-svn/lib/gtk-2.0/2.10.0"
-   export PATH="/opt/mozilla-firefox-hg/bin:${PATH}"
-fi
+# if [[ "${HOSTNAME}" =~ 'nihilismus' ]]; then
+#    export LD_LIBRARY_PATH="/opt/imagemagick-6.4.3/lib:/lib:/usr/lib:/usr/local/lib"
+#    export PATH="${PATH}:/opt/android-sdk_m5-rc15_linux-x86/tools"
+#    export PATH="/var/lib/gems/1.8/bin:${PATH}"
+#    export GTK_PATH="/opt/murrine-svn/lib/gtk-2.0/2.10.0"
+#    export PATH="/opt/mozilla-firefox-hg/bin:${PATH}"
+# fi
