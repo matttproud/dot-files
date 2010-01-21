@@ -7,17 +7,19 @@ fi
 
 if [ "$TERM" != "dumb" ]; then
   eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
-  alias dir='ls --color=auto --format=vertical'
-  alias vdir='ls --color=auto --format=long'
+  alias ls='ls --color=auto -F -h'
+  alias dir='ls --color=auto --format=vertical -F -h'
+  alias vdir='ls --color=auto --format=long -F -h'
 fi
 
 # some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -l -F -h'
+alias la='ls -A -F -h'
+alias l='ls -CF -h'
 
 alias bt=/auto/buildstatic/projects/bigtable/bt
+
+alias ..='cd ..'
 
 _CHROME_BASE="${HOME}/.config/google-chrome-"
 
