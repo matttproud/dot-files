@@ -1,4 +1,14 @@
+# -*- mode: sh -*-
+#
 # .bashrc
+
+_ZSH=$(which zsh)
+
+if [ -x "${_ZSH}" ]; then
+  exec "${_ZSH}"
+fi 
+
+unset _ZSH
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
