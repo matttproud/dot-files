@@ -1,4 +1,4 @@
-# -*- mode: lisp -*-
+;; -*- mode: lisp -*-
 
 ;; Add additional search paths.
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
