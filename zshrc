@@ -80,9 +80,10 @@ export HISTFILE=${HOME}/.zsh_history
 
 function precmd() {
   rehash
-}
 
-export PROMPT="[%n@%m $(basename ${PWD})]:[${fg_lcyan}%!${at_normal}]\$ "
+  # ZSH's %~ does not shorten to the basename of the CWD, unlike Bash.
+  export PROMPT="[%n@%m $(basename ${PWD})]:[%!]\$ "
+}
 
 # http://www.delodder.be/blog/debian/set-zsh-title-changing/ --
 # This is used before prompt re-draw.
@@ -94,9 +95,6 @@ function preexec() {
       print -Pn "\e]0;%~ - $1\a"
       ;;
   esac
-
-  # ZSH's %~ does not shorten to the basename of the CWD, unlike Bash.
-  export PROMPT="[%n@%m $(basename ${PWD})]:[${fg_lcyan}%!${at_normal}]\$ "
 }
 
 # export PROMPT="%n@%m:%~> "
