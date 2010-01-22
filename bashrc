@@ -6,7 +6,7 @@ _ZSH=$(which zsh)
 
 if [ -x "${_ZSH}" ]; then
   exec "${_ZSH}"
-fi 
+fi
 
 unset _ZSH
 
