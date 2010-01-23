@@ -1,0 +1,19 @@
+# -*- mode: conf -*-
+
+[color]
+  branch = auto
+  grep = auto
+  interactive = auto
+  pager = true
+  status = auto
+  ui = auto
+
+[log]
+  date = iso
+
+[pack]
+  threads = 3
+
+[user]
+  email = matt.proud@gmail.com
+  name = Matt T. Proud
