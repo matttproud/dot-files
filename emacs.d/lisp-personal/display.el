@@ -30,12 +30,12 @@
 
 ;;(set-background-color "black")
 ;;(set-foreground-color "white")
-(set-face-background 'mode-line "red")
-(set-face-foreground 'mode-line "white")
+; (set-face-background 'mode-line "red")
+;; (set-face-foreground 'mode-line "white")
 
 ;; Emacs people!
-(color-theme-dark-laptop)
-;;(color-theme-aalto-light)
+;; (color-theme-dark-laptop)
+(color-theme-aalto-light)
 
 (setq-default cursor-type 'bar)
 
