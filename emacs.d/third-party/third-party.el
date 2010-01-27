@@ -46,4 +46,6 @@
 
 (require 'nav)
 
+(require 'python-mode)
+
 (provide 'third-party)

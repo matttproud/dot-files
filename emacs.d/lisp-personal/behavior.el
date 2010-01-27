@@ -76,6 +76,9 @@
   (interactive "P")
   (self-insert-command (prefix-numeric-value argument)))
 
+;; Remove trailing whitespace on save.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (setq auto-mode-alist
       (nconc
        (list
