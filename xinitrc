@@ -16,12 +16,16 @@ export XCURSOR_THEME=contrastlarge
 
 xmodmap ~/.xmodmap
 
-xrdb < ~/.Xdefaults
+xrdb -merge ~/.Xdefaults
 
 xscreensaver -nosplash &
 
 if [ -x "$(which xbindkeys)" ]; then
   xbindkeys &
+fi
+
+if [ -d "/opt/ion3/bin" ]; then
+  PATH="/opt/ion3/bin:${PATH}"
 fi
 
 if [ -x "$(which ion3)" ]; then
