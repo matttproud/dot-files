@@ -4,9 +4,9 @@
 
 _ZSH=$(which zsh)
 
-if [ -x "${_ZSH}" ]; then
-  exec "${_ZSH}"
-fi
+# if [ -x "${_ZSH}" ]; then
+#   exec "${_ZSH}"
+# fi
 
 unset _ZSH
 

@@ -4,9 +4,9 @@
 
 style "user-font"
 {
-        font_name="Verdana 11"
+        font_name="Verdana 9"
 }
 widget_class "*" style "user-font"
 
-gtk-font-name="Verdana 11"
+gtk-font-name="Verdana 9"
 
