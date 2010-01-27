@@ -4,6 +4,7 @@
 (require 'bytecompile)
 (require 'display)
 (require 'identity)
+(require 'python)
 ;; (require 'multi-mode)
 
 (setq hostname-components (split-string (system-name) "\\."))

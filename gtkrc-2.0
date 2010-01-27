@@ -1,0 +1,12 @@
+# -*- mode: conf -*-
+
+# Make sure that sane fonts are used by default in Gtk+.
+
+style "user-font"
+{
+        font_name="Verdana 9"
+}
+widget_class "*" style "user-font"
+
+gtk-font-name="Verdana 9"
+
