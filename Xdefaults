@@ -25,4 +25,9 @@ Xft.hinting: 1
 Xft.hintstyle: hintfull
 Xft.rgba: rgb
 
+xscreensaver*quad: True
 xscreensaver.quad: True
+
+! Xcursor.core: 1
+
+Xcursor.*theme: contrastlarge
