@@ -25,5 +25,6 @@ _CHROME_BASE="${HOME}/.config/google-chrome-"
 
 alias chrome-personal="google-chrome --user-data-dir=\"${_CHROME_BASE}personal\""
 alias chrome-work="google-chrome --user-data-dir=\"${_CHROME_BASE}work\""
+alias chrome-work-proxy="google-chrome --user-data-dir=\"${_CHROME_BASE}work\" --proxy-server=cache.corp.google.com:3128"
 
 unset _CHROME_BASE
