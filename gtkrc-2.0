@@ -2,6 +2,8 @@
 
 # Make sure that sane fonts are used by default in Gtk+.
 
+gtk-key-theme-name = "Emacs"
+
 style "user-font"
 {
         font_name="Verdana 9"
@@ -10,3 +12,21 @@ widget_class "*" style "user-font"
 
 gtk-font-name="Verdana 9"
 
+# Enable keyboard shortcut modification in-flight.
+gtk-can-change-accels = 1
+
+# Enable the cursor blinking.
+gtk-cursor-blink = 1
+
+# Do not enable automatic selection on focus.
+gtk-entry-select-on-focus = 0
+
+# Do not select something when merely hi-lighted.
+gtk-label-select-on-focus = 0
+
+gtk-recent-files-limit = 1
+
+gtk-show-input-method-menu = 0
+gtk-show-unicode-menu= 0
+
+gtk-tooltip-timeout = 250
