@@ -48,4 +48,7 @@
 
 (require 'python-mode)
 
+(require 'linum)
+(global-linum-mode 1)
+
 (provide 'third-party)
