@@ -1,0 +1,2 @@
+# Ensure that AWT and Swing applications are readable.
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
