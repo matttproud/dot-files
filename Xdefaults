@@ -34,3 +34,6 @@ xscreensaver.quad: True
 ! Xcursor.core: 1
 
 Xcursor.*theme: contrastlarge
+
+Emacs*FontBackend: xft
+Emacs*font: Inconsolata-14
