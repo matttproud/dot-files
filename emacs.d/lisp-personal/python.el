@@ -3,6 +3,11 @@
   (setq py-indent-offset 2) ; Third-party.
 )
 
+; (py-continuation-offset 4)
+; (py-indent-offset 2)
+; (python-continuation-offset 4)
+; (python-indent 2)
+
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 
 (defun my-perl-mode-hook ()
