@@ -14,6 +14,8 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/emacs-nav-16"))
 
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party/icicles"))
+
 (require 'color-theme)
 (color-theme-initialize)
 
@@ -50,5 +52,7 @@
 
 (require 'linum)
 (global-linum-mode 1)
+
+(require 'icicles)
 
 (provide 'third-party)
