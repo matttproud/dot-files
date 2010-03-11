@@ -88,4 +88,7 @@
 ;; This preempts the built-in Python mode for the on in third-party.
 (autoload 'python-mode "python-mode")
 
+;; Start the Emacs server.
+(server-start)
+
 (provide 'behavior)

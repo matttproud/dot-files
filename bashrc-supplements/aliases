@@ -23,8 +23,8 @@ alias ..='cd ..'
 
 _CHROME_BASE="${HOME}/.config/google-chrome-"
 
-alias chrome-personal="google-chrome --user-data-dir=\"${_CHROME_BASE}personal\""
-alias chrome-work="google-chrome --user-data-dir=\"${_CHROME_BASE}work\""
-alias chrome-work-proxy="google-chrome --user-data-dir=\"${_CHROME_BASE}work\" --proxy-server=cache.corp.google.com:3128"
+alias chrome-personal="google-chrome --user-data-dir=\"${_CHROME_BASE}personal\" >/dev/null 2>&1"
+alias chrome-work="google-chrome --user-data-dir=\"${_CHROME_BASE}work\" >/dev/null 2>&1"
+alias chrome-work-proxy="google-chrome --user-data-dir=\"${_CHROME_BASE}work\" --proxy-server=cache.corp.google.com:3128 >/dev/null 2>&1"
 
 unset _CHROME_BASE
