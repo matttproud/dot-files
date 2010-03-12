@@ -91,4 +91,13 @@
 ;; Start the Emacs server.
 (server-start)
 
+;; Allow shift to select text!
+(setq shift-select-mode t)
+
+;; Allow one to delete a range of selected text with delete.
+(delete-selection-mode 1)
+
+;; Display whitespace.
+;; (whitespace-mode)
+
 (provide 'behavior)
