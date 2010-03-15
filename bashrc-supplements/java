@@ -1,2 +1,6 @@
 # Ensure that AWT and Swing applications are readable.
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+
+if [ -d "/usr/lib/jvm/java-6-openjdk" ]; then
+  export IDEA_JDK="/usr/lib/jvm/java-6-openjdk"
+fi

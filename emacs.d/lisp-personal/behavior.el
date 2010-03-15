@@ -100,4 +100,16 @@
 ;; Display whitespace.
 ;; (whitespace-mode)
 
+(defun duplicate-line ()
+  "Clone the current line."
+  (interactive)
+  (save-excursion
+    (copy-region-as-kill (line-beginning-position) (line-end-position))
+    (end-of-line)
+    (newline)
+    (yank)
+    (current-kill 1)))
+
+(global-set-key "\C-z" 'duplicate-line)
+
 (provide 'behavior)
