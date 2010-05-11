@@ -112,4 +112,7 @@
 
 (global-set-key "\C-z" 'duplicate-line)
 
+;; No splash screen.
+(setq inhibit-splash-screen t)
+
 (provide 'behavior)
