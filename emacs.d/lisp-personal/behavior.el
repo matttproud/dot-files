@@ -100,16 +100,22 @@
 ;; Display whitespace.
 ;; (whitespace-mode)
 
-(defun duplicate-line ()
-  "Clone the current line."
-  (interactive)
-  (save-excursion
-    (copy-region-as-kill (line-beginning-position) (line-end-position))
-    (end-of-line)
-    (newline)
-    (yank)
-    (current-kill 1)))
+;; (defun duplicate-line ()
+;;   "Clone the current line."
+;;   (interactive)
+;;   (save-excursion
+;;     (copy-region-as-kill (line-beginning-position) (line-end-position))
+;;     (end-of-line)
+;;     (newline)
+;;     (yank)
+;;     (current-kill 1)))
 
-(global-set-key "\C-z" 'duplicate-line)
+;; (global-set-key "\C-z" 'duplicate-line)
+
+(defun goto-matching-parenthesis (arg)
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t (self-insert-command (or arg 1)))))
 
 (provide 'behavior)

@@ -17,7 +17,7 @@
 (setq visible-bell t)
 
 ;; Disable menubar.
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 
 ;; Disable toolbar.
 (tool-bar-mode -1)
@@ -35,7 +35,7 @@
 
 ;; Emacs people!
 ;; (color-theme-dark-laptop)
-(color-theme-aalto-light)
+;; (color-theme-aalto-light)
 
 (setq-default cursor-type 'bar)
 

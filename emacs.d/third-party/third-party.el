@@ -53,6 +53,10 @@
 (require 'linum)
 (global-linum-mode 1)
 
-(require 'icicles)
+;; (require 'icicles)
+
+(require 'multi-term)
+
+(setq multi-term-program "/bin/bash")
 
 (provide 'third-party)
