@@ -55,4 +55,10 @@
 
 (require 'icicles)
 
+(require 'multi-term)
+
+(setq multi-term-program "/bin/bash")
+
+(add-to-list 'term-unbind-key-list "C-b")
+
 (provide 'third-party)

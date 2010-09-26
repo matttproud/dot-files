@@ -1,7 +1,7 @@
 ! -*- mode: conf -*-
 
-clear mod3
-remove lock = Caps_Lock
-add mod3 = Caps_Lock
-keysym Super_R = Multi_key
-keysym Super_L = Multi_key
+! clear mod3
+! remove lock = Caps_Lock
+! add mod3 = Caps_Lock
+! keysym Super_R = Multi_key
+! keysym Super_L = Multi_key
