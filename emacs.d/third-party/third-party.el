@@ -57,6 +57,10 @@
 
 (require 'multi-term)
 
+; Enable buffer changing to pass through terminal app.
+(add-to-list 'term-unbind-key-list "C-b")
 (setq multi-term-program "/bin/bash")
+
+(require 'frame-cmds)
 
 (provide 'third-party)
