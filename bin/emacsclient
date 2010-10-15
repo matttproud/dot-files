@@ -1,0 +1,31 @@
+#!/bin/sh
+
+readonly _PATH_AFFINITY=('/usr/local/bin' '/usr/bin' '/bin')
+
+_EMACSCLIENT=''
+_GVIM=''
+
+for path in ${_PATH_AFFINITY[@]}; do
+  prospective_emacsclient="${path}/emacsclient"
+  prospective_gvim="${path}/gvim"
+
+  if [ -x "${prospective_emacsclient}" ]; then
+    _EMACSCLIENT=${prospective_emacsclient}
+  fi
+
+  if [ -x "${prospective_gvim}" ]; then
+    _GVIM=${prospective_gvim}
+  fi
+done
+
+if [ ! -x "${_EMACSCLIENT}" ]; then
+  if [ ! -x "${_GVIM}" ]; then
+    echo 'No valid emacsclient or gvim found.' >&2
+    exit 1
+  fi
+  "${_GVIM}" "${@}"
+else
+  "${_EMACSCLIENT}" \
+    -c \
+    "${@}"
+fi

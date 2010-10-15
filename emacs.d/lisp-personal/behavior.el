@@ -115,19 +115,22 @@
 (setq whitespace-line-column 80
       whitespace-style '(tabs trailing lines-tail))
 
-(set-face-attribute 'whitespace-line nil
-                    :background "red1"
-                    :foreground "yellow"
-                    :weight 'bold)
+;; (set-face-attribute 'whitespace-line nil
+;;                     :background "red1"
+;;                     :foreground "yellow"
+;;                     :weight 'bold)
 
-(set-face-attribute 'whitespace-tab nil
-                    :background "red1"
-                    :foreground "yellow"
-                    :weight: 'bold)
+;; (set-face-attribute 'whitespace-tab nil
+;;                     :background "red1"
+;;                     :foreground "yellow"
+;;                     :weight: 'bold)
 
 (add-hook 'python-mode-hook 'whitespace-mode)
 
 ;; No splash screen.
 (setq inhibit-splash-screen t)
+
+(desktop-save-mode t)
+(require 'midnight)
 
 (provide 'behavior)
