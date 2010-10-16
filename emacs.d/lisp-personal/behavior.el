@@ -130,7 +130,6 @@
 ;; No splash screen.
 (setq inhibit-splash-screen t)
 
-(desktop-save-mode t)
-(require 'midnight)
+(require 'session)
 
 (provide 'behavior)
