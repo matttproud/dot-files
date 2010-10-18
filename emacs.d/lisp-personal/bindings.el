@@ -12,8 +12,7 @@
 (global-set-key (kbd "C-M-c") 'copy-line)
 (global-set-key (kbd "C-M-g") 'goto-line)
 
-(global-set-key (kbd "C-M-y") 'comment-region)
-(global-set-key (kbd "C-M-u") 'uncomment-region)
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
 ;; Ensure that delete does what I expect.
 (global-set-key [delete] 'delete-char)

@@ -4,6 +4,7 @@
 (require 'bytecompile)
 (require 'display)
 (require 'identity)
+(require 'javascript)
 (require 'python)
 ;; (require 'multi-mode)
 
