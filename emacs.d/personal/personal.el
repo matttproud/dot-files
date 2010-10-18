@@ -1,12 +1,12 @@
-(require 'behavior)
-(require 'bindings)
-(require 'buffer)
-(require 'bytecompile)
-(require 'display)
-(require 'identity)
-(require 'javascript)
-(require 'python)
-;; (require 'multi-mode)
+(setq dependencies
+      '(behavior bindings buffer bytecompile display identity javascript
+        python))
+
+(mapcar
+ (lambda (x)
+   (setq file (format "~/.emacs.d/personal/%s.el" x))
+   (load-file file))
+ dependencies)
 
 (setq hostname-components (split-string (system-name) "\\."))
 (setq google-found nil)

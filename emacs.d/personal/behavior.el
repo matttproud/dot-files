@@ -133,6 +133,8 @@
 ;; No splash screen.
 (setq inhibit-splash-screen t)
 
+(put 'erase-buffer 'disabled nil)
+
 (require 'session)
 
 (provide 'behavior)
