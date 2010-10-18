@@ -118,4 +118,19 @@
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
 
+;; (set-face-attribute 'whitespace-line nil
+;;                     :background "red1"
+;;                     :foreground "yellow"
+;;                     :weight 'bold)
+
+;; (set-face-attribute 'whitespace-tab nil
+;;                     :background "red1"
+;;                     :foreground "yellow"
+;;                     :weight: 'bold)
+
+(add-hook 'python-mode-hook 'whitespace-mode)
+
+;; No splash screen.
+(setq inhibit-splash-screen t)
+
 (provide 'behavior)
