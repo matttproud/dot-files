@@ -133,4 +133,6 @@
 ;; No splash screen.
 (setq inhibit-splash-screen t)
 
+(require 'session)
+
 (provide 'behavior)
