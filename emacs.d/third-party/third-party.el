@@ -13,7 +13,7 @@
 
 (setq load-dependencies
       '(color-theme column-marker window-number dot-mode nav python-mode linum
-        multi-term espresso))
+        multi-term espresso git))
 
 (mapcar
  (lambda (x)
@@ -29,11 +29,8 @@
 (autoload 'ion3-mode "ion3" "Major mode to edit ion3 config files" t)
 
 ;; Minor mode to support multiple major modes.
-;; (require 'mmm-mode)
-;; (require 'mmm-auto)
-
-;; Load the git packages.
-;; (require 'git-emacs)
+(require 'mmm-mode)
+(require 'mmm-auto)
 
 ;; (if (string= (substring emacs-version 0 2) "21")
 ;;    (message "Not loading Rail extensions.") (require 'rails))
