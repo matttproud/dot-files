@@ -29,8 +29,8 @@
 (autoload 'ion3-mode "ion3" "Major mode to edit ion3 config files" t)
 
 ;; Minor mode to support multiple major modes.
-(require 'mmm-mode)
-(require 'mmm-auto)
+;; (require 'mmm-mode)
+;; (require 'mmm-auto)
 
 ;; (if (string= (substring emacs-version 0 2) "21")
 ;;    (message "Not loading Rail extensions.") (require 'rails))
