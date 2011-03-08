@@ -2,6 +2,8 @@
 
 set -x
 
+echo $(date) >> /tmp/xsession.log-${USER}
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:${PATH}"
 
 THIRD_PARTY="${HOME}/3rd-Party"
