@@ -44,7 +44,7 @@
 ;; (require 'frame-cmds)
 (add-hook 'find-file-hook 'dot-mode-on)
 
-(global-linum-mode 1)
+;; (global-linum-mode 1)
 
 ;; (require 'icicles)
 
