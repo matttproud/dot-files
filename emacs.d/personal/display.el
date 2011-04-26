@@ -37,8 +37,6 @@
 ;; (color-theme-dark-laptop)
 ;; (color-theme-aalto-light)
 
-(color-theme-arjen)
-
 (setq-default cursor-type 'bar)
 
 (show-paren-mode t)

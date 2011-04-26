@@ -1,4 +1,4 @@
 # -*- mode: sh -*-
 
-# export SCALA_HOME=/opt/scala-2.7.6/scala-2.7.6.final
-# export PATH="${SCALA_HOME}/bin:${PATH}"
+export SCALA_HOME=/opt/scala-2.7.6/scala-2.7.6.final
+export PATH="${SCALA_HOME}/bin:${PATH}"

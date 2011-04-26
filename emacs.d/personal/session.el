@@ -1,6 +1,7 @@
 (require 'desktop)
 
 (desktop-save-mode t)
+(setq desktop-load-locked-desktop t)
 (require 'midnight)
 
 

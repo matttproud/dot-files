@@ -17,6 +17,3 @@
 [user]
   email = matt.proud@gmail.com
   name = Matt T. Proud
-
-[merge]
-  conflictstyle = diff3
