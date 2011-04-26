@@ -1,6 +1,12 @@
 (setq dependencies
-     '(behavior bindings buffer bytecompile display identity javascript
-       python))
+      '(behavior bindings buffer bytecompile display identity javascript
+        python))
+
+(mapcar
+ (lambda (x)
+   (setq file (format "~/.emacs.d/personal/%s.el" x))
+   (load-file file))
+ dependencies)
 
 (setq hostname-components (split-string (system-name) "\\."))
 (setq google-found nil)
@@ -10,28 +16,6 @@
   (setq hostname-components (cdr hostname-components))
   (if (string= momentary "google") (setq google-found t)))
 
-
-(defun load-google-stuffs
-  ()
-  "Load Google items."
-  (message "Loading Google Stuffs.")
-  (push 'google dependencies))
-
-(if google-found
-    (load-google-stuffs))
-
-(mapcar
- (lambda (x)
-   (setq file (format "~/.emacs.d/personal/%s.el" x))
-   (load-file file))
- dependencies)
-
-(setq requires
-      '(bookmark desktop))
-
-(mapcar
- (lambda (x)
-   (require x))
- requires)
-
+(if google-found (message "At Google."))
+(if google-found (require 'google))
 (provide 'personal)

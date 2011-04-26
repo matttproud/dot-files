@@ -135,6 +135,9 @@
 
 (put 'erase-buffer 'disabled nil)
 
+(setq desktop-save t)
+(setq desktop-load-locked-desktop t)
+
 (require 'session)
 
 (provide 'behavior)

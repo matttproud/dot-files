@@ -18,18 +18,6 @@
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
 
-
-(defun multi-term-new-and-rename
-  (b)
-  "Create a new multi-term and name it."
-  (interactive "sNew Terminal Name: ")
-  (multi-term)
-  (rename-buffer b)
-  )
-
-(global-set-key (kbd "C-c t") 'multi-term-next)
-(global-set-key (kbd "C-c T") 'multi-term-new-and-rename)
-
 (defcustom mtp-prefix nil
   "My global prefix for keymap bindings."
   :type 'sexp)

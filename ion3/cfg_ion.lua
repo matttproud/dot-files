@@ -23,6 +23,7 @@ META="Mod3+"
 --ALTMETA=""
 
 -- Terminal emulator
+-- XTERM="xterm"
 XTERM="/usr/bin/x-terminal-emulator"
 
 -- Some basic settings

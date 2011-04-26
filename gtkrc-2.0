@@ -4,7 +4,11 @@
 
 # gtk-key-theme-name = "Emacs"
 
-include "/usr/share/themes/MurrinaBlue/gtk-2.0/gtkrc"
+# include "/usr/share/themes/MurrinaAzul/gtk-2.0/gtkrc"
+# include "/usr/share/themes/MurrinaChrome/gtk-2.0/gtkrc"
+# include "/usr/share/themes/MurrinaNeoGraphite/gtk-2.0/gtkrc"
+include "/home/mtp/.themes/Murrina X-2/gtk-2.0/gtkrc"
+# include "/home/mtp/.themes/MurrinaNeo/gtk-2.0/gtkrc"
 
 style "user-font"
 {
