@@ -12,7 +12,7 @@ THEME_PATH="${THIRD_PARTY}/lib/gtk-2.0/2.4.0/engines"
 export COLORTERM='xterm'
 export PATH="${THIRD_PARTY}/bin:/home/mtp/bin:${PATH}"
 export LD_LIBRARY_PATH="${THEME_PATH}:${THIRD_PARTY}/lib:${LD_LIBRARY_PATH}"
-export GTK_PATH="${THIRD_PARTY}/lib/gtk-2.0"
+# export GTK_PATH="${THIRD_PARTY}/lib/gtk-2.0"
 
 export XCURSOR_THEME=contrastlarge
 
