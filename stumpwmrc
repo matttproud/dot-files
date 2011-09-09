@@ -99,7 +99,7 @@
 	(define-key m (kbd "M-r") "loadrc reload")
 	(define-key m (kbd ":") "eval-line")
 	m))
-	  
+
 
 (setf *debug-level* 10)
 

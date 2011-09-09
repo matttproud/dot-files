@@ -1,3 +1,15 @@
+################################################################################
+# Matt T. Proud's UNIX Dot (.) Files and Configurations                        #
+#                                                                              #
+# You are free to use these as you wish, except for I request that you provide #
+# attribution as well as a canonical link back to their source.                #
+#                                                                              #
+# - http://www.matttproud.com                                                  #
+# - http://blog.matttproud.com                                                 #
+# - https://github.com/matttproud                                              #
+#                                                                              #
+################################################################################
+#
 # -*- mode: conf -*-
 
 # Make sure that sane fonts are used by default in Gtk+.
@@ -43,32 +55,32 @@ gtk-tooltip-timeout = 250
 #   bind "<shift><ctrl>b" { "move-cursor" (logical-positions, -1, 1) }
 #   bind "<ctrl>f" { "move-cursor" (logical-positions, 1, 0) }
 #   bind "<shift><ctrl>f" { "move-cursor" (logical-positions, 1, 1) }
-# 
+#
 #   bind "<alt>b" { "move-cursor" (words, -1, 0) }
 #   bind "<shift><alt>b" { "move-cursor" (words, -1, 1) }
 #   bind "<alt>f" { "move-cursor" (words, 1, 0) }
 #   bind "<shift><alt>f" { "move-cursor" (words, 1, 1) }
-# 
+#
 #   bind "<ctrl>a" { "move-cursor" (paragraph-ends, -1, 0) }
 #   bind "<shift><ctrl>a" { "move-cursor" (paragraph-ends, -1, 1) }
 #   bind "<ctrl>e" { "move-cursor" (paragraph-ends, 1, 0) }
 #   bind "<shift><ctrl>e" { "move-cursor" (paragraph-ends, 1, 1) }
-# 
+#
 #   bind "<ctrl>w" { "cut-clipboard" () }
 #   bind "<ctrl>y" { "paste-clipboard" () }
-# 
+#
 #   bind "<ctrl>d" { "delete-from-cursor" (chars, 1) }
 #   bind "<alt>d" { "delete-from-cursor" (word-ends, 1) }
 #   bind "<ctrl>k" { "delete-from-cursor" (paragraph-ends, 1) }
 #   bind "<alt>backslash" { "delete-from-cursor" (whitespace, 1) }
-# 
+#
 #   bind "<ctrl><shift>a" { "select-all" (1) }
-# 
+#
 #   bind "<alt>space" { "delete-from-cursor" (whitespace, 1)
 #                       "insert-at-cursor" (" ") }
 #   bind "<alt>KP_Space" { "delete-from-cursor" (whitespace, 1)
 #                          "insert-at-cursor" (" ")  }
-# 
+#
 #   #
 #   # Some non-Emacs keybindings people are attached to
 #   #
@@ -79,7 +91,7 @@ gtk-tooltip-timeout = 250
 #   bind "<ctrl>h" { "delete-from-cursor" (chars, -1) }
 #   bind "<ctrl>w" { "delete-from-cursor" (word-ends, -1) }
 # }
-# 
+#
 # #
 # # Bindings for GtkTextView
 # #
@@ -89,11 +101,11 @@ gtk-tooltip-timeout = 250
 #   bind "<shift><ctrl>p" { "move-cursor" (display-lines, -1, 1) }
 #   bind "<ctrl>n" { "move-cursor" (display-lines, 1, 0) }
 #   bind "<shift><ctrl>n" { "move-cursor" (display-lines, 1, 1) }
-# 
+#
 #   bind "<ctrl>space" { "set-anchor" () }
 #   bind "<ctrl>KP_Space" { "set-anchor" () }
 # }
-# 
+#
 # #
 # # Bindings for GtkTreeView
 # #
@@ -103,7 +115,7 @@ gtk-tooltip-timeout = 250
 #   bind "<ctrl>f" { "move-cursor" (logical-positions, 1) }
 #   bind "<ctrl>b" { "move-cursor" (logical-positions, -1) }
 # }
-# 
+#
 # #
 # # Bindings for menus
 # #
@@ -114,7 +126,7 @@ gtk-tooltip-timeout = 250
 #   bind "<ctrl>f" { "move-current" (child) }
 #   bind "<ctrl>b" { "move-current" (parent) }
 # }
-# 
+#
 # class "GtkEntry" binding "gtk-emacs-text-entry"
 # class "GtkTextView" binding "gtk-emacs-text-entry"
 # class "GtkTextView" binding "gtk-emacs-text-view"

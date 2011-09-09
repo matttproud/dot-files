@@ -1,3 +1,17 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Matt T. Proud's UNIX Dot (.) Files and Configurations                        ;
+;                                                                              ;
+; You are free to use these as you wish, except for I request that you provide ;
+; attribution as well as a canonical link back to their source.                ;
+;                                                                              ;
+; - http://www.matttproud.com                                                  ;
+; - http://blog.matttproud.com                                                 ;
+; - https://github.com/matttproud                                              ;
+;                                                                              ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; -*- mode: lisp -*-
+
 (setq mmm-global-mode 'maybe)
 (setq mmm-submode-decoration-level 2)
 (set-face-background 'mmm-output-submode-face  "LightGrey")
