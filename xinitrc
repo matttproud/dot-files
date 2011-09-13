@@ -36,6 +36,8 @@ xrdb -merge ~/.Xdefaults
 
 xscreensaver -nosplash &
 
+numlockx on
+
 if [ -x "$(which xbindkeys)" ]; then
   xbindkeys &
 fi
