@@ -15,7 +15,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party"))
 
 (setq search-path-dependencies
-      '(mmm-mode-0.4.8 color-theme-6.6.0 g-client emacs-nav-16 icicles))
+      '(color-theme-6.6.0 g-client emacs-nav-16))
 (mapcar
  (lambda (x)
    (setq directory (format "~/.emacs.d/third-party/%s" x))
@@ -25,9 +25,13 @@
  search-path-dependencies)
 
 
+;; (setq load-dependencies
+;;      '(color-theme column-marker window-number dot-mode nav python-mode linum
+;;        multi-term espresso git))
+
 (setq load-dependencies
-      '(color-theme column-marker window-number dot-mode nav python-mode linum
-        multi-term espresso git))
+      '(color-theme column-marker window-number python-mode linum
+        multi-term git))
 
 (mapcar
  (lambda (x)
@@ -56,7 +60,7 @@
 (window-number-mode)
 
 ;; (require 'frame-cmds)
-(add-hook 'find-file-hook 'dot-mode-on)
+;; (add-hook 'find-file-hook 'dot-mode-on)
 
 ;; (global-linum-mode 1)
 

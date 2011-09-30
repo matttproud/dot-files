@@ -29,10 +29,11 @@
   ()
   "Load Google items."
   (message "Loading Google Stuffs.")
-  (push 'google dependencies))
+  (setq dependencies
+    (append dependencies '(google))))
 
 (if google-found
-    (load-google-stuffs))
+  (load-google-stuffs))
 
 (mapcar
  (lambda (x)
