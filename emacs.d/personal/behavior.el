@@ -154,4 +154,7 @@
 
 (require 'session)
 
+;; Enable fixed buffer windows.
+(require 'dedicated)
+
 (provide 'behavior)
