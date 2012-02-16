@@ -44,6 +44,14 @@
 (global-set-key (kbd "C-c t") 'multi-term-next)
 (global-set-key (kbd "C-c T") 'multi-term-new-and-rename)
 
+ (defun mtp-revert-buffer-without-confirmation
+  ()
+  "Revert a buffer unconditionally"
+  (interactive)
+  (revert-buffer 't 't))
+
+(global-set-key (kbd "C-c r") 'mtp-revert-buffer-without-confirmation)
+
 (defcustom mtp-prefix nil
   "My global prefix for keymap bindings."
   :type 'sexp)

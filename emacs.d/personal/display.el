@@ -51,7 +51,7 @@
 ;; (color-theme-dark-laptop)
 ;; (color-theme-aalto-light)
 
-(color-theme-arjen)
+;; (color-theme-arjen)
 
 (setq-default cursor-type 'bar)
 
