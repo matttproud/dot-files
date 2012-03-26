@@ -12,8 +12,14 @@
 !
 ! -*- mode: conf -*-
 
+! Bind Caps Lock to Control to alleviate »Emacs Pinky«.
+remove Lock = Caps_Lock
+add Control = Caps_Lock
+
+! Drive ion3 from left Control.
 clear mod3
-remove lock = Caps_Lock
-add mod3 = Caps_Lock
+remove Control = Control_L
+add mod3 = Control_L
+
 keysym Super_R = Multi_key
 keysym Super_L = Multi_key
