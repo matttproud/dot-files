@@ -30,7 +30,7 @@
 ;;        multi-term espresso git))
 
 (setq load-dependencies
-      '(color-theme column-marker window-number python-mode linum
+      '(color-theme column-marker go-mode-load window-number python-mode linum
         multi-term git))
 
 (mapcar
