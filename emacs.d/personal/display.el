@@ -21,6 +21,7 @@
 ;; Show column position.
 (setq column-number-mode t)
 
+(require 'scroll-bar)
 ;; Disable scrollbar.
 (toggle-scroll-bar -1)
 
