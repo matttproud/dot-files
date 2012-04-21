@@ -64,4 +64,7 @@
 
 ;; (global-set-key mtp-prefix mtp-global-map)
 
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+(global-set-key (kdb "C-x C-m") 'execute-extended-command)
+
 (provide 'bindings)
