@@ -32,3 +32,5 @@
 
 [merge]
   conflictstyle = diff3
+[core]
+	excludesfile = ~/.git/ignore/everything.gitignore
