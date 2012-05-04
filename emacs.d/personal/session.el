@@ -16,8 +16,16 @@
 
 (require 'desktop)
 
+(setq desktop-load-locked-desktop t ; Always load the locked desktop.
+      desktop-save t ; Always save the desktop, no matter what state the file
+                     ; was last in.
+      desktop-dirname "~/.emacs.d/desktop"
+      desktop-base-file-name "emacs.desktop"
+      desktop-base-lock-name "lock"
+      desktop-path (list desktop-dirname))
+
 (desktop-save-mode t)
-(setq desktop-load-locked-desktop t)
+
 (require 'midnight)
 
 
