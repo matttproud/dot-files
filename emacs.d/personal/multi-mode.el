@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "multi-mode.el")
+
 (setq mmm-global-mode 'maybe)
 (setq mmm-submode-decoration-level 2)
 (set-face-background 'mmm-output-submode-face  "LightGrey")
@@ -36,3 +38,5 @@
 (add-to-list 'auto-mode-alist '("\.rhtml$" . html-mode))
 
 (provide 'multi-mode)
+
+(trace-exit "multi-mode.el")

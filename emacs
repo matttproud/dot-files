@@ -12,6 +12,11 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(defun trace-enter (f) (message (format "Entering %s..." f)))
+(defun trace-exit (f) (message (format "Exiting %s..." f)))
+
+(trace-enter ".emacs")
+
 ;; Add additional search paths.
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party"))
@@ -22,3 +27,5 @@
 
 ;; Load stuff that I have authored.
 (load-file "~/.emacs.d/personal/personal.el")
+
+(trace-exit ".emacs")

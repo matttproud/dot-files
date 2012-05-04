@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "bindings.el")
+
 ;; Open a list of current buffers.
 (global-set-key (kbd "C-b") 'buffer-menu)
 
@@ -65,6 +67,9 @@
 ;; (global-set-key mtp-prefix mtp-global-map)
 
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
-(global-set-key (kdb "C-x C-m") 'execute-extended-command)
+(global-set-key (kbd "C-x m") 'execute-extended-command)
+
 
 (provide 'bindings)
+
+(trace-exit "bindings.el")

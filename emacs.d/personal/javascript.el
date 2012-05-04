@@ -12,6 +12,10 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "javascript.el")
+
 (setq espresso-indent-level 2)
 
 (provide 'javascript)
+
+(trace-exit "javascript.el")

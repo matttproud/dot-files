@@ -12,7 +12,11 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "identity.el")
+
 (setq user-full-name "Matt T. Proud")
 (setq user-mail-address "matt.proud@gmail.com")
 
 (provide 'identity)
+
+(trace-exit "identity.el")

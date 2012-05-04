@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "display.el")
+
 ;; Highlight selections.
 (setq transient-mark-mode t)
 
@@ -70,3 +72,5 @@
  nil
  '(("^.\\{80\\}\\(.\\)" 1 'my-80-column-face prepend)))
 (provide 'display)
+
+(trace-exit "display.el")

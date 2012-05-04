@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "behavior.el")
+
 ;; Delete the whole line, include the carriage return.
 (setq kill-whole-line t)
 
@@ -149,12 +151,11 @@
 
 (put 'erase-buffer 'disabled nil)
 
-(setq desktop-save t)
-(setq desktop-load-locked-desktop t)
-
 (require 'session)
 
 ;; Enable fixed buffer windows.
 (require 'dedicated)
 
 (provide 'behavior)
+
+(trace-exit "behavior.el")

@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "buffer.el")
+
 ;; Enable recent file list.
 (recentf-mode 1)
 
@@ -25,3 +27,5 @@
 (setq scroll-conservatively 10000)
 
 (provide 'buffer)
+
+(trace-exit "buffer.el")

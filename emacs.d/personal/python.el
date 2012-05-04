@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "python.el")
+
 (defun my-python-mode-hook ()
   (setq python-indent 2) ; GNU
   (setq py-indent-offset 2) ; Third-party.
@@ -47,3 +49,5 @@
 (add-hook 'sh-mode-hook 'my-sh-mode-hook)
 
 (provide 'python)
+
+(trace-exit "python.el")

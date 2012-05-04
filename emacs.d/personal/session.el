@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "session.el")
+
 (require 'desktop)
 
 (desktop-save-mode t)
@@ -24,3 +26,5 @@
 (add-hook 'auto-save-hook (lambda () (desktop-save-in-desktop-dir)))
 
 (provide 'session)
+
+(trace-exit "session.el")

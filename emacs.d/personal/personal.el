@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "personal.el")
+
 (setq dependencies
      '(behavior bindings buffer bytecompile display identity javascript
        python))
@@ -50,3 +52,5 @@
  requires)
 
 (provide 'personal)
+
+(trace-exit "personal.el")

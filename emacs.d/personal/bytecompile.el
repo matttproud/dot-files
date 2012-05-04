@@ -12,6 +12,8 @@
 ;;
 ;; -*- mode: lisp -*-
 
+(trace-enter "bytecompile.el")
+
 (defun byte-compile-user-init-file ()
   (let ((byte-compile-warnings '(unresolved)))
     ;; in case compilation fails, don't leave the old .elc around:
@@ -29,3 +31,5 @@
 (add-hook 'emacs-lisp-mode-hook 'lisp-mode-bytecompile-hook)
 
 (provide 'bytecompile)
+
+(trace-exit "bytecompile.el")
