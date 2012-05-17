@@ -31,7 +31,7 @@
 
 (setq load-dependencies
       '(color-theme column-marker go-mode-load window-number python-mode linum
-        multi-term git dedicated))
+        multi-term git dedicated rainbow-delimiters))
 
 (mapcar
  (lambda (x)

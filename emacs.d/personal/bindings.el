@@ -35,17 +35,6 @@
 (global-set-key [kp-delete] 'delete-char)
 
 
-(defun multi-term-new-and-rename
-  (b)
-  "Create a new multi-term and name it."
-  (interactive "sNew Terminal Name: ")
-  (multi-term)
-  (rename-buffer b)
-  )
-
-(global-set-key (kbd "C-c t") 'multi-term-next)
-(global-set-key (kbd "C-c T") 'multi-term-new-and-rename)
-
  (defun mtp-revert-buffer-without-confirmation
   ()
   "Revert a buffer unconditionally"
@@ -68,6 +57,9 @@
 
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-x m") 'execute-extended-command)
+
+(global-set-key (kbd "C-x g") 'goto-line)
+(global-set-key (kbd "C-c g") 'goto-line)
 
 
 (provide 'bindings)
