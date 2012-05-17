@@ -25,10 +25,6 @@
  search-path-dependencies)
 
 
-;; (setq load-dependencies
-;;      '(color-theme column-marker window-number dot-mode nav python-mode linum
-;;        multi-term espresso git))
-
 (setq load-dependencies
       '(color-theme column-marker go-mode-load window-number python-mode linum
         multi-term git dedicated rainbow-delimiters))
@@ -46,32 +42,13 @@
 
 (autoload 'ion3-mode "ion3" "Major mode to edit ion3 config files" t)
 
-;; Minor mode to support multiple major modes.
-;; (require 'mmm-mode)
-;; (require 'mmm-auto)
-
-;; (if (string= (substring emacs-version 0 2) "21")
-;;    (message "Not loading Rail extensions.") (require 'rails))
-
-
-;; (load-library "g")
-;; (require 'g)
+; Enable magic parentheses, brackets, and braces colorization.
+(global-rainbow-delimiters-mode)
 
 (window-number-mode)
-
-;; (require 'frame-cmds)
-;; (add-hook 'find-file-hook 'dot-mode-on)
-
-;; (global-linum-mode 1)
-
-;; (require 'icicles)
 
 ; Enable buffer changing to pass through terminal app.
 (add-to-list 'term-unbind-key-list "C-b")
 (setq multi-term-program "/bin/bash")
-
-(setq multi-term-program "/bin/bash")
-
-(add-to-list 'term-unbind-key-list "C-b")
 
 (provide 'third-party)
