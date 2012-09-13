@@ -156,6 +156,12 @@
 ;; Enable fixed buffer windows.
 (require 'dedicated)
 
+;; Use fuzzy matching for files and buffers.
+(ido-mode)
+
+;; Highlight the current line.
+(global-hl-line-mode)
+
 (provide 'behavior)
 
 (trace-exit "behavior.el")
