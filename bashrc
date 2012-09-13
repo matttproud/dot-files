@@ -27,7 +27,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-for supplement in "${HOME}/bashrc-supplements"/* ; do
+for supplement in "${HOME}/Development/shell/dot-files/bashrc-supplements"/* ; do
  . "${supplement}"
 done
 

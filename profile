@@ -12,6 +12,6 @@
 #
 # -*- mode: sh -*-
 
-for supplement in "${HOME}/profile-supplements"/* ; do
+for supplement in "${HOME}/Development/shell/dot-files/profile-supplements"/* ; do
   . "${supplement}"
 done
