@@ -156,9 +156,6 @@
 ;; Enable fixed buffer windows.
 (require 'dedicated)
 
-;; Use fuzzy matching for files and buffers.
-(ido-mode)
-
 ;; Highlight the current line.
 (defface hl-line '((t (:background "#a6cafe")))
   "Face to use for `hl-line-face'." :group 'hl-line)
