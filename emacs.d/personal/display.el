@@ -66,9 +66,6 @@
  nil
  '(("^.\\{80\\}\\(.\\)" 1 'my-80-column-face prepend)))
 
-;; Use an abhorrent color to highlight the current line.
-(set-face-background 'hl-line "#330")
-
 (provide 'display)
 
 (trace-exit "display.el")

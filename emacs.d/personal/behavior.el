@@ -160,7 +160,10 @@
 (ido-mode)
 
 ;; Highlight the current line.
-(global-hl-line-mode)
+(defface hl-line '((t (:background "#a6cafe")))
+  "Face to use for `hl-line-face'." :group 'hl-line)
+(setq hl-line-face 'hl-line)
+(global-hl-line-mode t)
 
 (provide 'behavior)
 
