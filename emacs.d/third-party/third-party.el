@@ -28,6 +28,7 @@
 (setq load-dependencies
       '(color-theme column-marker go-mode-load window-number python-mode linum
         multi-term git dedicated rainbow-delimiters highlight-beyond-fill-column))
+        multi-term git dedicated rainbow-delimiters powerline))
 
 (mapcar
  (lambda (x)

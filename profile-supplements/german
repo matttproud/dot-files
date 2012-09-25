@@ -12,4 +12,6 @@
 #
 # -*- mode: sh -*-
 
-export LC_ALL=de_DE.utf8
+if uname -a | grep -ivq darwin; then
+  export LC_ALL=de_DE.utf8
+fi

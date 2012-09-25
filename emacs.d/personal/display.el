@@ -45,16 +45,10 @@
 ;; Syntax highlighting.
 (global-font-lock-mode t)
 
-;;(set-background-color "black")
-;;(set-foreground-color "white")
-; (set-face-background 'mode-line "red")
-;; (set-face-foreground 'mode-line "white")
-
-;; Emacs people!
-;; (color-theme-dark-laptop)
-;; (color-theme-aalto-light)
-
-;; (color-theme-arjen)
+;; Use high contrast color scheme, since it is easy on my eyes in X11,
+;; virtual terminal, and Quartz/Cocoa/Carbon/what-ever-the-fuck-Apple-shoves-
+;; down-unsuspecting-saps-throats.
+(color-theme-high-contrast)
 
 (setq-default cursor-type 'bar)
 
@@ -71,6 +65,7 @@
 (font-lock-add-keywords
  nil
  '(("^.\\{80\\}\\(.\\)" 1 'my-80-column-face prepend)))
+
 (provide 'display)
 
 (trace-exit "display.el")

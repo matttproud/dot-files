@@ -19,13 +19,14 @@
 
 ;; Open a list of recent files.
 (global-set-key (kbd "C-M-r") 'recentf-open-files)
+(global-set-key (kbd "C-r") 'recentf-open-files)
 
 (global-set-key (kbd "C-<") 'beginning-of-buffer)
 (global-set-key (kbd "C->") 'end-of-buffer)
 
-(global-set-key (kbd "C-M-k") 'kill-line-entirely)
+(global-set-key (kbd "C-X e") 'kill-line-entirely)
 
-(global-set-key (kbd "C-M-c") 'copy-line)
+(global-set-key (kbd "C-x l") 'copy-line)
 (global-set-key (kbd "C-M-g") 'goto-line)
 
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
@@ -34,8 +35,7 @@
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
 
-
- (defun mtp-revert-buffer-without-confirmation
+(defun mtp-revert-buffer-without-confirmation
   ()
   "Revert a buffer unconditionally"
   (interactive)
