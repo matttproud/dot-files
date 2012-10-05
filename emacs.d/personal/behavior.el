@@ -162,6 +162,11 @@
 (setq hl-line-face 'hl-line)
 (global-hl-line-mode t)
 
+(defun mtp-visit-from-kill-buffer ()
+  "Visit a buffer named by the value of `current-kill'."
+  (interactive)
+  (find-file (current-kill 0)))
+
 (provide 'behavior)
 
 (trace-exit "behavior.el")

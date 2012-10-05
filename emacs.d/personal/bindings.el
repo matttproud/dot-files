@@ -61,6 +61,7 @@
 (global-set-key (kbd "C-x g") 'goto-line)
 (global-set-key (kbd "C-c g") 'goto-line)
 
+(global-set-key (kbd "C-x C-v") 'mtp-visit-from-kill-buffer)
 
 (provide 'bindings)
 
