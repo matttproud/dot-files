@@ -15,7 +15,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party"))
 
 (setq search-path-dependencies
-      '(color-theme-6.6.0 g-client emacs-nav-16))
+      '(color-theme-6.6.0 g-client emacs-nav-16 auto-complete-1.3.1))
 (mapcar
  (lambda (x)
    (setq directory (format "~/.emacs.d/third-party/%s" x))
@@ -27,7 +27,7 @@
 
 (setq load-dependencies
       '(color-theme column-marker go-mode-load window-number python-mode linum
-        multi-term git dedicated rainbow-delimiters powerline yaml-mode))
+        multi-term git dedicated rainbow-delimiters powerline yaml-mode auto-complete))
 
 (mapcar
  (lambda (x)
@@ -50,5 +50,9 @@
 ; Enable buffer changing to pass through terminal app.
 (add-to-list 'term-unbind-key-list "C-b")
 (setq multi-term-program "/bin/bash")
+
+(require 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
 
 (provide 'third-party)
