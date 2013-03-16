@@ -15,7 +15,7 @@
 (trace-enter "personal.el")
 
 (setq dependencies
-     '(behavior bindings buffer bytecompile display identity javascript
+     '(behavior bindings buffer bytecompile display identity
        python))
 
 (setq hostname-components (split-string (system-name) "\\."))

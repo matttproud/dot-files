@@ -54,5 +54,8 @@
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
+(global-auto-complete-mode t)
+
+(autoload 'protobuf-mode "protobuf-mode" "Load Protocol Buffer support." t)
 
 (provide 'third-party)

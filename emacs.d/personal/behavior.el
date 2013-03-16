@@ -32,23 +32,6 @@
 (setq-default indent-tabs-mode nil)
 (setq indent-tabs-mode nil)
 
-;; This is not always working and will need to be investigated.
-
-;; (add-hook 'c++-mode-hook
-;;           '(lambda () (font-lock-set-up-width-warning 80)))
-
-;; (add-hook 'java-mode-hook
-;;           '(lambda () (font-lock-set-up-width-warning 80)))
-
-;; (add-hook 'python-mode-hook
-;;           '(lambda () (font-lock-set-up-width-warning 80)))
-
-;; (add-hook 'sh-mode
-;;           '(lambda () (font-lock-set-up-width-warning 80)))
-
-;; (add-hook 'ruby-mode
-;;           '(lambda () (font-lock-set-up-width-warning 80)))
-
 (setq tab-stop-list '(2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40))
 (setq sh-indentation 2
       sh-basic-offset 2)
@@ -60,12 +43,6 @@
 (setq c-basic-offset 2)
 
 (setq-default scroll-conservatively 1)
-
-;;(setq x-select-enable-clipboard t)
-
-;;(setq make-backup-files t)
-;;(setq version-control t)
-;;(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
 
 (defun copy-line ()
   "Copy the current line into the kill ring."
@@ -113,36 +90,11 @@
 ;; Allow one to delete a range of selected text with delete.
 (delete-selection-mode 1)
 
-;; Display whitespace.
-;; (whitespace-mode)
-
-;; (defun duplicate-line ()
-;;   "Clone the current line."
-;;   (interactive)
-;;   (save-excursion
-;;     (copy-region-as-kill (line-beginning-position) (line-end-position))
-;;     (end-of-line)
-;;     (newline)
-;;     (yank)
-;;     (current-kill 1)))
-
-;; (global-set-key "\C-z" 'duplicate-line)
-
 (defun goto-matching-parenthesis (arg)
   (interactive "p")
   (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
         ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
         (t (self-insert-command (or arg 1)))))
-
-;; (set-face-attribute 'whitespace-line nil
-;;                     :background "red1"
-;;                     :foreground "yellow"
-;;                     :weight 'bold)
-
-;; (set-face-attribute 'whitespace-tab nil
-;;                     :background "red1"
-;;                     :foreground "yellow"
-;;                     :weight: 'bold)
 
 (add-hook 'python-mode-hook 'whitespace-mode)
 
@@ -166,6 +118,33 @@
   "Visit a buffer named by the value of `current-kill'."
   (interactive)
   (find-file (current-kill 0)))
+
+(setq mtp-auto-complete-modes '(go-mode makefile-mode shell-script-mode sh-mode conf-mode protobuf-mode))
+(mapcar
+ (lambda (x)
+   (add-to-list 'ac-modes x))
+ mtp-auto-complete-modes)
+
+(add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode))
+
+(setenv
+ "GOPATH"
+ (expand-file-name "~/Development/go"))
+(setenv
+ "PATH"
+ (concat
+  (getenv "GOPATH") "/bin" ";"
+  (getenv "PATH")))
+(setq
+ exec-path
+ (append
+  exec-path
+  (list
+   (expand-file-name
+    "~/Development/go/bin")
+   (expand-file-name
+    "~/.gvm/gos/go1.0.3/bin"))))
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 (provide 'behavior)
 

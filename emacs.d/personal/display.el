@@ -33,9 +33,6 @@
 ;; Disable beeping.
 (setq visible-bell t)
 
-;; Disable menubar.
-;; (menu-bar-mode -1)
-
 ;; Disable toolbar.
 (tool-bar-mode -1)
 

@@ -43,18 +43,6 @@
 
 (global-set-key (kbd "C-c r") 'mtp-revert-buffer-without-confirmation)
 
-(defcustom mtp-prefix nil
-  "My global prefix for keymap bindings."
-  :type 'sexp)
-
-;; (defvar mtp-global-map
-;;   (let ((map (make-sparse-keymap)))
-;;     (define-key map "n" 'next-window)
-;;     (define-key map "p" 'previoux-window)
-;;     map))
-
-;; (global-set-key mtp-prefix mtp-global-map)
-
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-x m") 'execute-extended-command)
 
