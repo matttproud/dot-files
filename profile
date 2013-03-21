@@ -15,6 +15,7 @@
 for supplement in "${HOME}/Development/shell/dot-files/profile-supplements"/* ; do
   . "${supplement}"
 done
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 if [ -f "${HOME}/.dircolors" ]; then
    eval $(dircolors ~/.dircolors)
