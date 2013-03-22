@@ -146,6 +146,12 @@
     "~/.gvm/gos/go1.0.3/bin"))))
 (add-hook 'before-save-hook 'gofmt-before-save)
 
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+
+(savehist-mode t)
+(setq savehist-file "~/.emacs.d/savehist")
+
 (provide 'behavior)
 
 (trace-exit "behavior.el")
