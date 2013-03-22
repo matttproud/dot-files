@@ -133,7 +133,7 @@
 (setenv
  "PATH"
  (concat
-  (getenv "GOPATH") "/bin" ";"
+  (getenv "GOPATH") "/bin" ":"
   (getenv "PATH")))
 (setq
  exec-path
