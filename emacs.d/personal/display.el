@@ -14,10 +14,7 @@
 
 (trace-enter "display.el")
 
-(if window-system
-    (load-theme 'solarized-dark t)
-  (load-theme 'solarized-light t))
-
+(load-theme 'solarized-light t)
 
 ;; Highlight selections.
 (setq transient-mark-mode t)
