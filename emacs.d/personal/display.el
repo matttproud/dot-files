@@ -14,6 +14,11 @@
 
 (trace-enter "display.el")
 
+(if window-system
+    (load-theme 'solarized-dark t)
+  (load-theme 'solarized-light t))
+
+
 ;; Highlight selections.
 (setq transient-mark-mode t)
 
@@ -45,7 +50,7 @@
 ;; Use high contrast color scheme, since it is easy on my eyes in X11,
 ;; virtual terminal, and Quartz/Cocoa/Carbon/what-ever-the-fuck-Apple-shoves-
 ;; down-unsuspecting-saps-throats.
-(color-theme-high-contrast)
+;; (color-theme-high-contrast)
 
 (setq-default cursor-type 'bar)
 
