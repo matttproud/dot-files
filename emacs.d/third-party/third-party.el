@@ -14,8 +14,10 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/third-party"))
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/third-party/emacs-color-theme-solarized")
+
 (setq search-path-dependencies
-      '(color-theme-6.6.0 g-client emacs-nav-16 auto-complete-1.3.1))
+      '(g-client emacs-nav-16 auto-complete-1.3.1))
 (mapcar
  (lambda (x)
    (setq directory (format "~/.emacs.d/third-party/%s" x))
@@ -26,7 +28,7 @@
 
 
 (setq load-dependencies
-      '(color-theme column-marker go-mode-load window-number python-mode linum
+      '(column-marker go-mode-load window-number python-mode linum
         multi-term git dedicated rainbow-delimiters powerline yaml-mode auto-complete))
 
 (mapcar
@@ -34,8 +36,6 @@
    (message "Loading %s." x)
    (require x))
  load-dependencies)
-
-(color-theme-initialize)
 
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
