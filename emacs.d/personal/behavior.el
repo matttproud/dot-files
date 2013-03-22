@@ -134,7 +134,8 @@
  "PATH"
  (concat
   (getenv "GOPATH") "/bin" ":"
-  (getenv "PATH")))
+  (getenv "PATH")
+  ":" (expand-file-name "~/.gvm/gos/go1.0.3/bin")))
 (setq
  exec-path
  (append
