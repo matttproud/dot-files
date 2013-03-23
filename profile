@@ -15,3 +15,7 @@
 for supplement in "${HOME}/Development/shell/dot-files/profile-supplements"/* ; do
   . "${supplement}"
 done
+
+if [ -f "${HOME}/.dircolors" ]; then
+   eval $(dircolors ~/.dircolors)
+fi
