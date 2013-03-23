@@ -13,4 +13,9 @@ function! s:CheckOutFile()
 endfunction
 au FileChangedRO * nested :call <SID>CheckoutFile()
 
-syn on
+
+execute pathogen#infect()
+
+syntax enable
+set background=light
+colorscheme solarized
