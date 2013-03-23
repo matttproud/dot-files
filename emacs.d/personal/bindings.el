@@ -34,6 +34,9 @@
 
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
+(global-set-key (kbd "C-c C-c") 'compile)
+(global-set-key (kbd "C-c M-c") 'recompile)
+
 ;; Ensure that delete does what I expect.
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
