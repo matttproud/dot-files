@@ -15,7 +15,7 @@
 (trace-enter "bindings.el")
 
 ;; Open a list of current buffers.
-(global-set-key (kbd "C-b") 'buffer-menu)
+(global-set-key (kbd "C-x b") 'buffer-menu)
 
 ;; Open a list of recent files.
 (global-set-key (kbd "C-M-r") 'recentf-open-files)
@@ -28,6 +28,9 @@
 
 (global-set-key (kbd "C-x l") 'copy-line)
 (global-set-key (kbd "C-M-g") 'goto-line)
+
+(global-set-key (kbd "C-x p") 'beginning-of-defun)
+(global-set-key (kbd "C-x n") 'end-of-defun)
 
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
