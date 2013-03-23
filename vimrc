@@ -18,4 +18,5 @@ execute pathogen#infect()
 
 syntax enable
 set background=light
+set ruler
 colorscheme solarized
