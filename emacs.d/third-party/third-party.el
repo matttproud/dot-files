@@ -29,7 +29,7 @@
 
 (setq load-dependencies
       '(column-marker go-mode-load window-number python-mode linum
-        multi-term git dedicated rainbow-delimiters powerline yaml-mode auto-complete go-flymake))
+        multi-term git dedicated rainbow-delimiters powerline yaml-mode auto-complete))
 
 (mapcar
  (lambda (x)
