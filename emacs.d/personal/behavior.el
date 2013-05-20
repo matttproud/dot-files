@@ -134,24 +134,42 @@
  "PATH"
  (concat
   (getenv "GOPATH") "/bin" ":"
-  (getenv "PATH")
-  ":" (expand-file-name "~/.gvm/gos/go1.0.3/bin")))
+  (expand-file-name "~/.gvm/gos/go1.1/bin") ":"
+  (expand-file-name "~/.gvm/pkgsets/go1.1/global/bin") ":"
+  (getenv "PATH") ":"))
 (setq
  exec-path
  (append
   exec-path
   (list
-   (expand-file-name
-    "~/Development/go/bin")
-   (expand-file-name
-    "~/.gvm/gos/go1.0.3/bin"))))
-(add-hook 'before-save-hook 'gofmt-before-save)
+   (expand-file-name "~/Development/go/bin")
+   (expand-file-name "~/.gvm/gos/go1.1/bin")
+   (expand-file-name "~/.gvm/pkgsets/go1.1/global/bin"))))
+
+(add-hook 'go-mode-hook
+          '(lambda ()
+            (add-hook 'before-save-hook
+                      'gofmt-before-save nil t)
+            (add-hook 'before-save-hook
+                      '(lambda ()) nil t)))
 
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 
 (savehist-mode t)
 (setq savehist-file "~/.emacs.d/savehist")
+
+
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
+
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (flyspell-prog-mode)))
+
+(setq flyspell-issue-message-flag nil)
 
 (provide 'behavior)
 
