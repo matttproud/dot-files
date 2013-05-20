@@ -17,7 +17,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/third-party/emacs-color-theme-solarized")
 
 (setq search-path-dependencies
-      '(g-client emacs-nav-16 auto-complete-1.3.1 goflymake))
+      '(g-client emacs-nav-16 auto-complete-1.3.1))
 (mapcar
  (lambda (x)
    (setq directory (format "~/.emacs.d/third-party/%s" x))
@@ -29,7 +29,7 @@
 
 (setq load-dependencies
       '(column-marker go-mode-load window-number python-mode linum
-        multi-term git dedicated rainbow-delimiters powerline yaml-mode auto-complete go-flymake))
+        multi-term git dedicated rainbow-delimiters powerline yaml-mode auto-complete))
 
 (mapcar
  (lambda (x)
