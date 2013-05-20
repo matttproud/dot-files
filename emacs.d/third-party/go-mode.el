@@ -61,8 +61,14 @@
 (defun go--old-completion-list-style (list)
   (mapcar (lambda (x) (cons x nil)) list))
 
-(defalias 'go--prog-mode
-   (if (fboundp 'prog-mode) 'prog-mode 'fundamental-mode))
+;; GNU Emacs 24 has prog-mode, older GNU Emacs and XEmacs do not.
+;; Ideally we'd use defalias instead, but that breaks in XEmacs.
+;;
+;; TODO: If XEmacs decides to add prog-mode, change this to use
+;; defalias to alias prog-mode or fundamental-mode to go--prog-mode
+;; and use that in define-derived-mode.
+(if (not (fboundp 'prog-mode))
+    (define-derived-mode prog-mode fundamental-mode "" ""))
 
 (defun go--regexp-enclose-in-symbol (s)
   ;; XEmacs does not support \_<, GNU Emacs does. In GNU Emacs we make
@@ -80,7 +86,12 @@
 (defconst go-label-regexp go-identifier-regexp)
 (defconst go-type-regexp "[[:word:][:multibyte:]*]+")
 (defconst go-func-regexp (concat (go--regexp-enclose-in-symbol "func") "\\s *\\(" go-identifier-regexp "\\)"))
-(defconst go-func-meth-regexp (concat (go--regexp-enclose-in-symbol "func") "\\s *\\(?:(\\s *" go-identifier-regexp "\\s +" go-type-regexp "\\s *)\\s *\\)?\\(" go-identifier-regexp "\\)("))
+(defconst go-func-meth-regexp (concat
+                               (go--regexp-enclose-in-symbol "func") "\\s *\\(?:(\\s *"
+                               "\\(" go-identifier-regexp "\\s +\\)?" go-type-regexp
+                               "\\s *)\\s *\\)?\\("
+                               go-identifier-regexp
+                               "\\)("))
 (defconst go-builtins
   '("append" "cap"   "close"   "complex" "copy"
     "delete" "imag"  "len"     "make"    "new"
@@ -167,6 +178,7 @@
      ;; TODO do we actually need this one or isn't it just a function call?
      (,(concat "\\.\\s *(" go-type-name-regexp) 1 font-lock-type-face) ;; Type conversion
      (,(concat (go--regexp-enclose-in-symbol "func") "[[:space:]]+(" go-identifier-regexp "[[:space:]]+" go-type-name-regexp ")") 1 font-lock-type-face) ;; Method receiver
+     (,(concat (go--regexp-enclose-in-symbol "func") "[[:space:]]+(" go-type-name-regexp ")") 1 font-lock-type-face) ;; Method receiver without variable name
      ;; Like the original go-mode this also marks compound literal
      ;; fields. There, it was marked as to fix, but I grew quite
      ;; accustomed to it, so it'll stay for now.
@@ -385,7 +397,7 @@ current line will be returned."
       (forward-char))))
 
 ;;;###autoload
-(define-derived-mode go-mode go--prog-mode "Go"
+(define-derived-mode go-mode prog-mode "Go"
   "Major mode for editing Go source text.
 
 This mode provides (not just) basic editing capabilities for
@@ -486,6 +498,8 @@ recommended that you look at goflymake
 (add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
 
 (defun go--apply-rcs-patch (patch-buffer)
+  "Apply an RCS-formatted diff from PATCH-BUFFER to the current
+buffer."
   (let ((target-buffer (current-buffer))
         ;; Relative offset between buffer line numbers and line numbers
         ;; in patch.
@@ -550,7 +564,9 @@ recommended that you look at goflymake
     ;; output in case of success.
     (if (zerop (call-process "gofmt" nil errbuf nil "-w" tmpfile))
         (if (zerop (call-process-region (point-min) (point-max) "diff" nil patchbuf nil "-n" "-" tmpfile))
-            (message "Buffer is already gofmted")
+            (progn
+              (kill-buffer errbuf)
+              (message "Buffer is already gofmted"))
           (go--apply-rcs-patch patchbuf)
           (kill-buffer errbuf)
           (message "Applied gofmt"))
@@ -568,8 +584,8 @@ recommended that you look at goflymake
     (insert "gofmt errors:\n")
     (while (search-forward-regexp (concat "^\\(" (regexp-quote tmpfile) "\\):") nil t)
       (replace-match (file-name-nondirectory filename) t t nil 1))
-    (display-buffer errbuf)
-    (compilation-mode)))
+    (compilation-mode)
+    (display-buffer errbuf)))
 
 ;;;###autoload
 (defun gofmt-before-save ()
