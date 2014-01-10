@@ -1,3 +1,5 @@
+;; -*- mode: lisp -*-
+
 ;; Package Management
 (require 'package)
 
@@ -18,6 +20,7 @@
 
 ;; Appearance
 (powerline-default-theme)
+(load-theme 'solarized-dark)
 
 ;; Key Bindings
 (global-set-key (kbd "C-x m") 'execute-extended-command)
@@ -71,6 +74,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-delay 0.8)
+ '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(flycheck-check-syntax-automatically (quote (save new-line mode-enabled)))
  '(python-indent-offset 2))
 (custom-set-faces
