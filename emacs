@@ -157,7 +157,14 @@ With a negative prefix argument NUMBER, move forward NUMBER closed brackets."
  '(ac-delay 0.8)
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
  '(flycheck-check-syntax-automatically (quote (save new-line mode-enabled)))
- '(python-indent-offset 2))
+ '(python-indent-offset 2)
+ '(sp-autodelete-closing-pair nil)
+ '(sp-autodelete-opening-pair nil)
+ '(sp-autodelete-pair nil)
+ '(sp-autodelete-wrap nil)
+ '(sp-autoescape-string-quote nil)
+ '(sp-autoinsert-if-followed-by-word nil)
+ '(sp-autoinsert-pair nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
