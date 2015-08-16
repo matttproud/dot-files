@@ -12,27 +12,32 @@
 !
 ! -*- mode: conf -*-
 
-! emacs.font: 7x14
-
-
-XTerm*background: lightgrey
-XTerm*cursorColor: #89B83F
+XTerm*TitleBar: on
+XTerm*background: black
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*cursorBlink: false
+XTerm*cursorColor: yellow
 XTerm*eightBitInput: false
-XTerm*foreground: black
+XTerm*font: 7x14
+XTerm*foreground: white
 XTerm*metaSendsEscape: true
+XTerm*pointerColor: white
+XTerm*pointerColorBackground: black
 XTerm*savelines: 4000
 XTerm*scrollBar: true
-
-XTerm*TitleBar: on
-
-! XTerm*faceName: Vera sans mono
-! XTerm*faceSize: 12
-! Xterm*termName: xterm-xfree86
-! XTerm*font: 7x14
-! XTerm*boldFont: -misc-fixed-bold-r-normal--14-130-75-75-c-70-UTF-8
-
-XTerm*font: 7x14
-
+xterm*VT100.geometry:     80x25
+xterm*dynamicColors:      true
+xterm*eightBitInput:      true
+xterm*faceName:           Terminus:style=Regular:size=10
+xterm*jumpScroll:         true
+xterm*multiScroll:        true
+xterm*rightScrollBar:     false
+xterm*saveLines:          512
+xterm*scrollBar:          false
+xterm*scrollKey:          true
+xterm*scrollTtyOutput:    false
+xterm*toolBar:            false
+xterm*utf8:               2
 xterm*visualBell: true
 
 Xft.antialias: 1
@@ -43,9 +48,6 @@ Xft.rgba: rgb
 xscreensaver*quad: True
 xscreensaver.quad: True
 
-! Xcursor.core: 1
-
 Xcursor.*theme: contrastlarge
 
 Emacs*FontBackend: xft
-! Emacs*font: Inconsolata-14
