@@ -13,37 +13,42 @@
 ! -*- mode: conf -*-
 
 XTerm*TitleBar: on
-XTerm*background: black
+XTerm*allowBoldFonts: false
+XTerm*background: gray88
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 XTerm*cursorBlink: false
-XTerm*cursorColor: yellow
-XTerm*eightBitInput: false
+XTerm*cursorColor: black
 XTerm*font: 7x14
-XTerm*foreground: white
+XTerm*foreground: black
 XTerm*metaSendsEscape: true
-XTerm*pointerColor: white
-XTerm*pointerColorBackground: black
+XTerm*pointerColor: black
+XTerm*pointerColorBackground: gray88
 XTerm*savelines: 4000
-XTerm*scrollBar: true
-xterm*VT100.geometry:     80x25
-xterm*dynamicColors:      true
-xterm*eightBitInput:      true
-xterm*faceName:           Terminus:style=Regular:size=10
-xterm*jumpScroll:         true
-xterm*multiScroll:        true
-xterm*rightScrollBar:     false
-xterm*saveLines:          512
-xterm*scrollBar:          false
-xterm*scrollKey:          true
-xterm*scrollTtyOutput:    false
-xterm*toolBar:            false
-xterm*utf8:               2
-xterm*visualBell: true
+XTerm*VT100.geometry:     80x25
+XTerm*dynamicColors:      true
+XTerm*eightBitInput:      true
+! XTerm*faceName:           Inconsolata:style=Regular:size=12
+! XTerm*faceName:           Terminus:style=Regular:size=10
+XTerm*faceName:           Meslo LG S DZ:style=Regular:size=10
+XTerm*jumpScroll:         true
+XTerm*multiScroll:        true
+XTerm*rightScrollBar:     false
+XTerm*saveLines:          512
+XTerm*scrollBar:          false
+XTerm*scrollKey:          true
+XTerm*scrollTtyOutput:    false
+XTerm*toolBar:            false
+XTerm*utf8:               2
+XTerm*visualBell: true
+XTerm*termName: xterm-256color
 
 Xft.antialias: 1
 Xft.hinting: 1
 Xft.hintstyle: hintfull
+! Xft.rgba: none
+! Xft.lcdfilter:  lcdnone
 Xft.rgba: rgb
+Xft.lcdfilter:  lcddefault
 
 xscreensaver*quad: True
 xscreensaver.quad: True

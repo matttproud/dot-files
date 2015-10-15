@@ -1,9 +1,12 @@
 execute pathogen#infect()
+call pathogen#helptags()
 
 syntax on
-colorscheme less
+set background=light
+colorscheme peaksea
 set number
 set ruler
+set hlsearch
 
 let g:neocomplete#enable_at_startup = 1
 
@@ -36,3 +39,21 @@ let g:tagbar_type_go = {
 \ }
 
 nmap <F8> :TagbarToggle<CR>
+nmap <F2> :browse old<CR>
+
+set cursorline
+hi CursorLine term=bold cterm=bold ctermbg=White guibg=Grey40
+
+noremap ; :
+inoremap jj <ESC>
+let mapleader = ","
+vmap Q gq
+nmap Q gqa
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+set laststatus=2
+let g:airline_theme="light"

@@ -57,3 +57,7 @@ export HISTFILESIZE=1000
 export CVS_RSH=ssh
 export PATH="${HOME}/bin:${PATH}"
 export LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
+
+echo -e -n "\x1b[\x33 q"  # Disable line blinking on XTerm.
+
+set -o vi
