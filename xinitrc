@@ -1,15 +1,16 @@
-#!/bin/sh
-
-touch ~/.agent
-chmod 0700 ~/.agent
-gpg-agent --daemon -s --scdaemon-program /usr/libexec/scdaemon --enable-ssh-support > ~/.agent
-. ~/.agent
-xsettingsd -c ~/.xsettingsd &
+#!/bin/bash
+xsettingsd -c ~/.xsettings &
 xbindkeys &
 xsetroot -solid black
-emacs --daemon &
 setxkbmap -option compose:lwin
 setxkbmap -option ctrl:nocaps
-xrdb ~/.Xdefaults
+xrdb -load ~/.Xdefaults || xrdb -merge ~/.Xdefaults
 xscreensaver -no-splash &
-exec /usr/local/bin/i3
+/usr/local/google/home/mtp/.kbdremap-watch &
+~/.xkbremap
+~/.xkbremap-event &
+feh --bg-scale ~/Development/Personal/dot-files/assets/Pulse.jpg
+xset fp+ ~/.local/share/fonts/tamsyn
+xset fp rehash
+exec /usr/bin/i3
+
