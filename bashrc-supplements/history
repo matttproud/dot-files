@@ -1,5 +1,0 @@
-# Instruct bash to append history on exit versus overwriting.
-shopt -s histappend
-
-# Ignore command prefixed with space and duplicates.
-export HISTCONTROL=ignoreboth

@@ -1,9 +1,0 @@
-EMACS=$(which emacs)
-
-if [ -x "${EMACS}" ]; then
-  if ! pgrep -f emacsserver; then
-    "${EMACS}" \
-      --daemon \
-      --no-splash >/dev/null 2>&1 &
-  fi
-fi

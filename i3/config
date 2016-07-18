@@ -160,7 +160,7 @@ mode "go_to_window" {
                 bindsym 3 [con_mark="m3"] focus
                 bindsym 4 [con_mark="m4"] focus
                 bindsym 5 [con_mark="m5"] focus
-                                                                                            
+
                 bindsym Return mode "default"
                 bindsym Escape mode "default"
 

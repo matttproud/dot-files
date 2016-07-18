@@ -1,4 +1,7 @@
+set nocompatible
+"filetype plugin indent on
 filetype plugin on
+"filetype off
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -6,8 +9,19 @@ syntax on
 set background=dark
 colorscheme adio
 set number
+set showcmd
 set ruler
 set hlsearch
+set nowrap
+set backspace=indent,eol,start
+set showmatch
+set ignorecase
+set smartcase
+set hlsearch
+" set incsearch
+
+set nobackup
+set noswapfile
 
 let g:neocomplete#enable_at_startup = 1
 
@@ -50,7 +64,7 @@ noremap ; :
 inoremap jj <ESC>
 let mapleader = ","
 vmap Q gq
-nmap Q gqa
+nmap Q gqap
 
 map <up> <nop>
 map <down> <nop>
@@ -58,6 +72,7 @@ map <left> <nop>
 map <right> <nop>
 
 set laststatus=2
+" let g:airline_theme="light"
 let g:airline_theme="molokai"
 let g:rehash256 = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -87,3 +102,39 @@ if &term =~ '256color'
 "disable Background Color Erase (BCE)
   set t_ut=
 endif
+
+au BufReadPost *.pi set syntax=python
+
+nnoremap Q <nop>
+match ErrorMsg '\s\+$'
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+nnoremap <silent> <Leader>rts :call TrimWhiteSpace()<CR>
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
+nnoremap <Leader>wr :set wrap! wrap?<CR>
+
+" Case sensitive, partial match inclusive.
+nnoremap <Leader>hi :set hlsearch<CR>:let @/='<C-r><C-w>'<CR>
+" " Case sensitive, no partial match.
+nnoremap <Leader>ho :set hlsearch<CR>:let @/='\<<C-r><C-w>\>'<CR>
+" " Case insensitive, partial match inclusive.
+nnoremap <Leader>hu :set hlsearch<CR>:let @/='<C-r><C-w>\c'<CR>
+" " Case insensitive, no partial match.
+nnoremap <Leader>hy :set hlsearch<CR>:let @/='\<<C-r><C-w>\>\c'<CR>
+
+nnoremap <Leader>cl :set cursorline!<CR>
+nnoremap <Leader>cc :set cursorcolumn!<CR>
+nnoremap <Leader>cx :set cursorcolumn cursorline<CR>
+nnoremap <Leader>cn :set nocursorline nocursorcolumn<CR>
+
+nnoremap <Leader>fs 1z=
+
+set wildmenu

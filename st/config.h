@@ -23,7 +23,8 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char shell[] = "/bin/bash";
+// static char shell[] = "/bin/bash";
+static char shell[] = "/usr/local/google/home/mtp/bin/mksh";
 static char *utmp = NULL;
 static char stty_args[] = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -70,6 +71,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
+/* static char termname[] = "st-256color"; */
 static char termname[] = "xterm-256color";
 
 static unsigned int tabspaces = 2;
@@ -384,4 +386,13 @@ static Key key[] = {
 static uint selmasks[] = {
 	[SEL_RECTANGULAR] = Mod1Mask,
 };
+
+/*
+ *  * Printable characters in ASCII, used to estimate the advance width
+ *   * of single wide characters.
+ *    */
+static char ascii_printable[] =
+	" !\"#$%&'()*+,-./0123456789:;<=>?"
+	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
+	"`abcdefghijklmnopqrstuvwxyz{|}~";
 

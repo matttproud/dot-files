@@ -1,1 +1,0 @@
-look_cleanwhite.lua
