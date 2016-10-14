@@ -102,11 +102,8 @@ if &term =~ '256color'
 "disable Background Color Erase (BCE)
   set t_ut=
 endif
-<<<<<<< HEAD
 
 autocmd BufWritePre * %s/\s\+$//e
-||||||| merged common ancestors
-=======
 
 au BufReadPost *.pi set syntax=python
 
@@ -143,4 +140,3 @@ nnoremap <Leader>cn :set nocursorline nocursorcolumn<CR>
 nnoremap <Leader>fs 1z=
 
 set wildmenu
->>>>>>> 86f699031e46ab398e332f53e1d4c4620da2d59d
