@@ -87,3 +87,5 @@ if &term =~ '256color'
 "disable Background Color Erase (BCE)
   set t_ut=
 endif
+
+autocmd BufWritePre * %s/\s\+$//e
