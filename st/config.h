@@ -12,8 +12,9 @@
 /* static char font[] = "Source Code Pro Medium:pixelsize=15:lcdfilter=lcddefault:hintstyle=hintfull:hinting=true:rgba=rgb:antialias=true:autohint=true"; */
 /* static char font[] = "DejaVu Sans Mono:pixelsize=14:lcdfilter=lcddefault:hintstyle=hintfull:hinting=true:rgba=rgb:antialias=true:autohint=true"; */
 /* static char font[] = "Source Code Pro:style=Regular:pixelsize=15:lcdfilter=lcddefault:hintstyle=hintfull:hinting=true:rgba=rgp:antialias=true:autohint=true"; */
-static char font[] = "-misc-tamsyn-medium-r-normal--16-116-100-100-c-80-iso8859-1";
-static int borderpx = 2;
+/* static char font[] = "-misc-tamsyn-medium-r-normal--16-116-100-100-c-80-iso8859-1"; */
+static char font[] = "Go Mono:style=Regular:pixelsize=14:lcdfilter=lcddefault:hintstyle=hintfull:hinting=true:rgba=none:antialias=true:autohint=false";
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -23,8 +24,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-// static char shell[] = "/bin/bash";
-static char shell[] = "/usr/local/google/home/mtp/bin/mksh";
+static char shell[] = "/home/mtp/local/bin/mksh";
 static char *utmp = NULL;
 static char stty_args[] = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -71,7 +71,6 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-/* static char termname[] = "st-256color"; */
 static char termname[] = "xterm-256color";
 
 static unsigned int tabspaces = 2;
@@ -388,11 +387,12 @@ static uint selmasks[] = {
 };
 
 /*
- *  * Printable characters in ASCII, used to estimate the advance width
- *   * of single wide characters.
- *    */
+ * Printable characters in ASCII, used to estimate the advance width
+ * of single wide characters.
+ */
 static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
+
 

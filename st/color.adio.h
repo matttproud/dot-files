@@ -19,10 +19,10 @@ static const char *colorname[] = {
 	"#55ffff",		/* 14: ANSI Color 14 */
 	"#ffffff",		/* 15: ANSI Color 15 */
 	[255] = 0,
-	[256] = "#ffffea",		/* 256: Background */
-	[257] = "#000000",		/* 257: Foreground */
-	[258] = "#eeee9e",		/* 258: Cursor */
-	[259] = "#000000",		/* 259: Cursor Text */
+	[256] = "#121212",		/* 256: Background */
+	[257] = "#cecece",		/* 257: Foreground */
+	[258] = "#1084da",		/* 258: Cursor */
+	[259] = "#ffffff",		/* 259: Cursor Text */
 	/* No support for text highlight coloring; would be #ffffff. */
 	/* No support for highlight coloring; would be #09263e. */
 	/* No support for bold coloring; would be #ffffff. */

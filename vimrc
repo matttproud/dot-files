@@ -5,9 +5,12 @@ filetype plugin on
 execute pathogen#infect()
 call pathogen#helptags()
 
-syntax on
-set background=dark
-colorscheme adio
+" syntax on
+"set background=dark
+"colorscheme adio
+syntax off
+set background=light
+colorscheme acme
 set number
 set showcmd
 set ruler
@@ -58,7 +61,8 @@ nmap <F2> :browse old<CR>
 noremap <F3> :set invnumber<CR>
 inoremap <F3> <C-O>:set invnumber<CR>
 
-set cursorline
+" set cursorline
+set nocursorline
 
 noremap ; :
 inoremap jj <ESC>

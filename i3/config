@@ -112,26 +112,28 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Mediating Adio and http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
-font pango:Tamsyn 10
-#                       border  bg      text    indicator
-# client.focused          #1c1c1c #000000 #d0d0d0 #0087d7
-client.focused          #1c1c1c #000000 #1084da #0087d7
-client.urgent           #ff9090 #ff9090 #0060a0 #0087d7
-client.focused_inactive #000000 #1c1c1c #bcbcbc #0087d7
-client.unfocused        #000000 #1c1c1c #bcbcbc #0087d7
-new_window normal 0
+font pango:Go Mono Bold 10
+#                       border  bg      text    indicator child
+# client.focused          #1c1c1c #000000 #d0d0d0 #0087d7 #ff0000
+client.focused          #8888cc #eaffff #000000 #8888cc #8888cc
+client.urgent           #8888cc #eaffff #000000 #8888cc #00ff00
+client.focused_inactive #8888cc #eaffff #000000 #8888cc #99994c
+client.unfocused        #8888cc #eaffff #000000 #8888cc #99994c
+client.background       #ffffea
+new_window normal 1
 bar {
-        font pango:Tamsyn 10
+        font pango:Go Mono Bold 10
         position top
         tray_output primary
-        status_command ~/bin/mtp-i3status
+        status_command /home/mtp/local/bin/i3status
+        #status_command ~/bin/mtp-i3status
         colors {
-            background         #1c1c1c
-            statusline         #bcbcbc
-            focused_workspace  #000000 #000000 #d0d0d0
-            active_workspace   #1c1c1c #1c1c1c #0060a0
-            inactive_workspace #1c1c1c #1c1c1c #585858
-            urgent_workspace   #ff9090 #ff9090 #0060a0
+            background         #eaffff
+            statusline         #000000
+            focused_workspace  #000000 #8888cc #000000
+            active_workspace   #000000 #eaffff #000000
+            inactive_workspace #000000 #eaffff #000000
+            urgent_workspace   #000000 #eaffff #000000
         }
 }
 

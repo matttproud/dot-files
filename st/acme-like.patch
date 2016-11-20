@@ -1,0 +1,27 @@
+diff --git a/st.c b/st.c
+index e50e884..717953c 100644
+--- a/st.c
++++ b/st.c
+@@ -3871,9 +3871,9 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
+ 	}
+ 
+ 	if (base.mode & ATTR_REVERSE) {
+-		temp = fg;
+-		fg = bg;
+-		bg = temp;
++		/* ACME Style Selection */
++		fg = fg;
++		bg = &dc.col[defaultcs];
+ 	}
+ 
+ 	if ((base.mode & ATTR_BOLD_FAINT) == ATTR_FAINT) {
+@@ -3947,7 +3947,8 @@ xdrawcursor(void)
+ {
+ 	static int oldx = 0, oldy = 0;
+ 	int curx;
+-	Glyph g = {' ', ATTR_NULL, defaultbg, defaultcs}, og;
++	/* ACME cursor.  */
++	Glyph g = {' ', ATTR_NULL, defaultfg, defaultcs}, og;
+ 	int ena_sel = sel.ob.x != -1 && sel.alt == IS_SET(MODE_ALTSCREEN);
+ 	Color drawcol;
+ 
